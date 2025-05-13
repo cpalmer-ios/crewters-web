@@ -18,7 +18,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
       <div className="container flex flex-col items-center justify-between gap-4 py-10 md:h-24 md:flex-row md:py-0">
         <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-2 md:px-0">
           <Icons.logo className={dark ? "crewters-logo h-7 w-12 rounded-full" : "filter invert crewters-logo h-7 w-12 rounded-full"} />
-          <p className="text-center text-sm leading-loose md:text-left">
+          <p className="text-center text-xs leading-loose md:text-left">
             Built by{" "}
             <a
               href={siteConfig.links.twitter}
@@ -26,25 +26,25 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              shadcn
+              Crewters
             </a>
             . Hosted on{" "}
             <a
-              href="https://vercel.com"
+              href="https://github.com"
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              Vercel
+              GitHub Pages
             </a>
-            . Illustrations by{" "}
+            . Photos by{" "}
             <a
               href="https://popsy.co"
               target="_blank"
               rel="noreferrer"
               className="font-medium underline underline-offset-4"
             >
-              Popsy
+              Wendy Wei
             </a>
             . The source code is available on{" "}
             <a
