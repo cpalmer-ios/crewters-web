@@ -74,7 +74,9 @@ export const metadata = {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head />
+      <head>
+        <script src="https://kit.fontawesome.com/b6dace8d13.js" crossOrigin="anonymous"></script>
+      </head>
       <body
         className={cn(
           "min-h-screen bg-background font-sans antialiased",

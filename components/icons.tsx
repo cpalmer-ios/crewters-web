@@ -1,3 +1,5 @@
+import Image from "next/image"
+import logo from "@/assets/icon.png"
 import {
   AlertTriangle,
   ArrowRight,
@@ -9,7 +11,6 @@ import {
   File,
   FileText,
   HelpCircle,
-  Image,
   Laptop,
   Loader2,
   LucideProps,
@@ -29,7 +30,9 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
-  logo: Command,
+  logo: () => (
+    <Image src={logo} alt="Logo" priority className="h-7 w-12 rounded-full" />
+  ),
   close: X,
   spinner: Loader2,
   chevronLeft: ChevronLeft,
