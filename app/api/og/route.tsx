@@ -45,7 +45,7 @@ export async function GET(req: Request) {
             <g clip-path="url(#a)" fill={paint}>
               <path d="M99.715 9.784h26.128v4.823h-10.365v25.37h-5.182v-25.37h-10.58V9.784ZM56.746 9.784v4.823H35.803v7.757h16.842v4.823H35.803v7.967h20.943v4.823H30.62v-25.37h-.002V9.784h26.128ZM69.792 9.797H63.01l24.292 30.192h6.801L81.956 24.903 94.084 9.82l-6.782.01-8.742 10.856-8.768-10.89ZM76.751 31.363l-3.396-4.222L62.99 40.012h6.802l6.96-8.649Z" />
               <path
-                fill-rule="evenodd"
+                fillRule="evenodd"
                 clip-rule="evenodd"
                 d="M30.802 39.977 6.478 9.77H0v30.193h5.182V16.225l19.11 23.752h6.51Z"
               />
@@ -62,7 +62,7 @@ export async function GET(req: Request) {
               height="48"
               rx="9"
               stroke={paint}
-              stroke-width="2"
+              strokeWidth="2"
             />
             <defs>
               <clipPath id="a">
@@ -104,14 +104,14 @@ export async function GET(req: Request) {
                 <path
                   d="M30 44v-8a9.6 9.6 0 0 0-2-7c6 0 12-4 12-11 .16-2.5-.54-4.96-2-7 .56-2.3.56-4.7 0-7 0 0-2 0-6 3-5.28-1-10.72-1-16 0-4-3-6-3-6-3-.6 2.3-.6 4.7 0 7a10.806 10.806 0 0 0-2 7c0 7 6 11 12 11a9.43 9.43 0 0 0-1.7 3.3c-.34 1.2-.44 2.46-.3 3.7v8"
                   stroke={paint}
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />
                 <path
                   d="M18 36c-9.02 4-10-4-14-4"
                   stroke={paint}
-                  stroke-width="2"
+                  strokeWidth="2"
                   stroke-linecap="round"
                   stroke-linejoin="round"
                 />

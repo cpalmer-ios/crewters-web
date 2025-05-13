@@ -30,8 +30,8 @@ import {
 export type Icon = LucideIcon
 
 export const Icons = {
-  logo: () => (
-    <Image src={logo} alt="Logo" priority className="h-7 w-12 rounded-full" />
+  logo: (props : any) => (
+    <Image src={logo} alt="Logo" priority {...props} />
   ),
   close: X,
   spinner: Loader2,
