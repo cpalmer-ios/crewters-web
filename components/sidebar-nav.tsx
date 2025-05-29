@@ -5,6 +5,7 @@ import { usePathname } from "next/navigation"
 
 import { SidebarNavItem } from "types"
 import { cn } from "@/lib/utils"
+import React from "react"
 
 export interface DocsSidebarNavProps {
   items: SidebarNavItem[]
@@ -42,22 +43,53 @@ export function DocsSidebarNavItems({
     <div className="grid grid-flow-row auto-rows-max text-sm">
       {items.map((item, index) =>
         !item.disabled && item.href ? (
-          <Link
-            key={index}
-            href={item.href}
-            className={cn(
-              "flex w-full items-center rounded-md p-2 hover:underline",
-              {
-                "bg-muted": pathname === item.href,
-              }
-            )}
-            target={item.external ? "_blank" : ""}
-            rel={item.external ? "noreferrer" : ""}
-          >
-            {item.title}
-          </Link>
+          <React.Fragment key={index}>
+            {!item.subLinks && (
+            <Link
+              href={item.href}
+              className={cn(
+                "flex w-full items-center rounded-md p-2 hover:underline",
+                {
+                  "bg-muted": pathname === item.href,
+                }
+              )}
+              target={item.external ? "_blank" : ""}
+              rel={item.external ? "noreferrer" : ""}
+            >
+              {item.title}
+            </Link>)}
+            {item?.subLinks && item.subLinks.length > 0 ? (
+              <div className="ml-4">
+                <details>
+                  <summary>{item.title}</summary>
+                  <ul>
+                    {item.subLinks.map((subItem, subIndex) => (
+                      <li key={subIndex} className="pl-4">
+                        <Link
+                          href={subItem.href}
+                          className={cn(
+                            "flex w-full items-center rounded-md p-2 hover:underline",
+                            {
+                              "bg-muted": pathname === subItem.href,
+                            }
+                          )}
+                          target={subItem.external ? "_blank" : ""}
+                          rel={subItem.external ? "noreferrer" : ""}
+                        >
+                          {subItem.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </details>
+              </div>
+            ) : null}
+          </React.Fragment>
         ) : (
-          <span className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60">
+          <span
+            key={index}
+            className="flex w-full cursor-not-allowed items-center rounded-md p-2 opacity-60"
+          >
             {item.title}
           </span>
         )

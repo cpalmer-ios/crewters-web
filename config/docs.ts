@@ -7,7 +7,7 @@ export const docsConfig: DocsConfig = {
       href: "/docs",
     },
     {
-      title: "Guides",
+      title: "User Guides",
       href: "/guides",
     },
   ],
@@ -29,11 +29,6 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation",
         },
         {
-          title: "Contentlayer",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
           title: "Components",
           href: "/docs/documentation/components",
         },
@@ -53,27 +48,67 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Blog",
+      title: "Crewters API",
       items: [
         {
           title: "Introduction",
           href: "/docs/in-progress",
-          disabled: true,
         },
         {
-          title: "Build your own",
+          title: "Architecture",
           href: "/docs/in-progress",
           disabled: true,
         },
         {
-          title: "Writing Posts",
+          title: "Features",
+          href: "/docs/in-progress",
+          subLinks: [
+             {
+          title: "• User",
           href: "/docs/in-progress",
           disabled: true,
+        },
+        {
+          title: "• Events",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Leagues",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Teams",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Stats",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Trophies",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Requests",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Notifications",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+          ]
         },
       ],
     },
     {
-      title: "Dashboard",
+      title: "Database",
       items: [
         {
           title: "Introduction",
@@ -81,29 +116,55 @@ export const docsConfig: DocsConfig = {
           disabled: true,
         },
         {
-          title: "Layouts",
+          title: "Architecture",
           href: "/docs/in-progress",
           disabled: true,
         },
         {
-          title: "Server Components",
+          title: "Schemas",
+          href: "/docs/in-progress",
+          subLinks: [
+             {
+          title: "• User",
           href: "/docs/in-progress",
           disabled: true,
         },
         {
-          title: "Authentication",
+          title: "• Events",
           href: "/docs/in-progress",
           disabled: true,
         },
         {
-          title: "Database with Prisma",
+          title: "• Leagues",
           href: "/docs/in-progress",
           disabled: true,
         },
         {
-          title: "API Routes",
+          title: "• Teams",
           href: "/docs/in-progress",
           disabled: true,
+        },
+        {
+          title: "• Stats",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Trophies",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Requests",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
+          title: "• Notifications",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+          ]
         },
       ],
     },

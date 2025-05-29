@@ -1,9 +1,8 @@
 "use client"
 
-import * as React from "react"
+import React, { useEffect } from "react"
 import Link from "next/link"
 import { useSelectedLayoutSegment } from "next/navigation"
-import { ThemeProvider } from "next-themes"
 
 import { MainNavItem } from "types"
 import { siteConfig } from "@/config/site"
@@ -22,11 +21,30 @@ export function MainNav({ items, children }: MainNavProps) {
   const [showMobileMenu, setShowMobileMenu] = React.useState<boolean>(false)
   const { resolvedTheme } = useTheme()
   const dark = resolvedTheme === "dark"
+  const menuRef = React.useRef<HTMLDivElement>(null)
+
+    useEffect(() => {
+    if (!showMobileMenu) return
+
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        menuRef.current &&
+        !menuRef.current.contains(event.target as Node)
+      ) {
+        setShowMobileMenu(false)
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside)
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside)
+    }
+  }, [showMobileMenu])
 
   return (
-    <div className="flex gap-6 md:gap-10">
+    <div ref={menuRef} className="flex gap-6 md:gap-10">
       <Link href="/" className="hidden items-center space-x-2 md:flex">
-        <Icons.logo className={dark ? "crewters-logo h-7 w-12 rounded-full" : "filter invert crewters-logo h-7 w-12 rounded-full"} />
+        <Icons.logo className={dark ? "crewters-logo h-7 w-12 rounded-full" : "filter invert crewters-logo h-7 w-12 rounded-full opacity-50"} />
 
         <span className="hidden font-bold sm:inline-block">
           {siteConfig.name}
@@ -58,12 +76,12 @@ export function MainNav({ items, children }: MainNavProps) {
         {showMobileMenu ? (
           <Icons.close />
         ) : (
-          <Icons.logo className={dark ? "crewters-logo h-7 w-12 rounded-full" : "filter invert crewters-logo h-7 w-12 rounded-full"} />
+          <Icons.logo className={dark ? "crewters-logo h-7 w-12 rounded-full" : "filter invert crewters-logo h-7 w-12 rounded-full opacity-50"} />
         )}
         <span className="font-bold">Menu</span>
       </button>
       {showMobileMenu && items && (
-        <MobileNav items={items}>{children}</MobileNav>
+        <MobileNav showMobileMenu setShowMobileMenu={setShowMobileMenu} items={items}>{children}</MobileNav>
       )}
     </div>
   )

@@ -16,6 +16,7 @@ export type SidebarNavItem = {
   disabled?: boolean
   external?: boolean
   icon?: keyof typeof Icons
+  subLinks?: SidebarNavItem[]
 } & (
   | {
       href: string
@@ -35,6 +36,7 @@ export type SiteConfig = {
   links: {
     twitter: string
     github: string
+    instagram: string
   }
 }
 
@@ -44,6 +46,9 @@ export type DocsConfig = {
 }
 
 export type MarketingConfig = {
+  mainNav: MainNavItem[]
+}
+export type PricingConfig = {
   mainNav: MainNavItem[]
 }
 
