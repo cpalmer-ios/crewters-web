@@ -1,10 +1,11 @@
 import Link from "next/link"
+import Image from "next/image"
+
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
 export default async function IndexPage() {
-
   return (
     <>
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
@@ -21,8 +22,8 @@ export default async function IndexPage() {
             Venues around the World.
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            I&apos;m building a iOS Mobile App with React Native and open sourcing
-            everything. Follow along as we figure this out together.
+            I&apos;m building a iOS Mobile App with React Native and open
+            sourcing everything. Follow along as we figure this out together.
           </p>
           <div className="space-x-4">
             <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
@@ -39,6 +40,32 @@ export default async function IndexPage() {
           </div>
         </div>
       </section>
+      <section className="container flex max-w-[64rem] flex-row items-center justify-center py-2 md:py-6 lg:py-12">
+        <Image
+          src="/images/screen3.png"
+          alt="Crewters Sports Map Image"
+          width={300}
+          height={150}
+          className="rounded-lg bg-background"
+          priority
+        />
+        <Image
+          src="/images/screen1.png"
+          alt="Crewters Sports Map Image"
+          width={300}
+          height={150}
+          className="rounded-lg bg-background"
+          priority
+        />
+        <Image
+          src="/images/screen2.png"
+          alt="Crewters Sports Map Image"
+          width={300}
+          height={150}
+          className="rounded-lg bg-background"
+          priority
+        />
+      </section>
       <section
         id="features"
         className="container space-y-6 bg-slate-50 py-8 dark:bg-transparent md:py-12 lg:py-24"
@@ -48,9 +75,9 @@ export default async function IndexPage() {
             Features
           </h2>
           <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            This project is an experiment to see how a modern app, with features
-            like auth, subscriptions, API routes, and static pages would work in
-            Next.js 13 app dir.
+            This project is a community motivated effort to build a sports
+            social network that connects you with your friends, teams, and local
+            sports venues.
           </p>
         </div>
         <div className="mx-auto grid justify-center gap-4 sm:grid-cols-2 md:max-w-[64rem] md:grid-cols-3">
@@ -70,8 +97,8 @@ export default async function IndexPage() {
               <i className="fa-solid fa-hand-fist"></i>
               <div className="space-y-2">
                 <h3 className="font-bold">Challenge</h3>
-                <p className="text-sm">
-                  Challenge anyone in your network to a 1:1 game.
+                <p className="text-sm text-muted-foreground">
+                  Challenge anyone in your network to a game.
                 </p>
               </div>
             </div>
@@ -167,9 +194,42 @@ export default async function IndexPage() {
         </div>
         <div className="mx-auto text-center md:max-w-[58rem]">
           <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
-            Crewters also includes a blog and a full-featured documentation site
-            built using Contentlayer and MDX.
+            Crewters also includes a built-in chat system, allowing you to
+            communicate with your friends and teammates. You can also share
+            photos and videos of your games, and follow your friends&apos;
+            activities. <br />
           </p>
+        </div>
+      </section>
+      <section className="container flex max-w-[64rem] flex-col items-center justify-center gap-4 py-8 md:py-12 lg:py-24">
+        <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+            Join the Crewters Community
+          </h2>
+          <p className="max-w-[85%] leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+            Crewters is a community-driven project that aims to connect people
+            with their friends, teams, and local sports venues. Whether
+            you&apos;re looking to join a team, challenge your friends, or just
+            find a place to play, Crewters has you covered. <br />
+            <Link
+              href={siteConfig.links.github}
+              target="_blank"
+              rel="noreferrer"
+              className="underline underline-offset-4"
+            >
+              Join the Crewters community on GitHub
+            </Link>
+            &nbsp; to contribute, report issues, or just follow along with the
+            development of this exciting project.
+          </p>
+          <Link
+            href={siteConfig.links.github}
+            target="_blank"
+            rel="noreferrer"
+            className={cn(buttonVariants({ size: "lg" }))}
+          >
+            Join the Crewters Community
+          </Link>
         </div>
       </section>
       <section id="open-source" className="container py-8 md:py-12 lg:py-24">
