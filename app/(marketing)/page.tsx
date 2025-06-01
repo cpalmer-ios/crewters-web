@@ -4,6 +4,9 @@ import Image from "next/image"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { SignupButtonWithModal } from "./components/SingUpButtonWithModal"
+
+// const width = 
 
 export default async function IndexPage() {
   return (
@@ -25,10 +28,9 @@ export default async function IndexPage() {
             I&apos;m building a iOS Mobile App with React Native and open
             sourcing everything. Follow along as we figure this out together.
           </p>
-          <div className="space-x-4">
-            <Link href="/login" className={cn(buttonVariants({ size: "lg" }))}>
-              Sign Up
-            </Link>
+          <div className="space-x-0">
+            <SignupButtonWithModal />
+            &nbsp;&nbsp;&nbsp;
             <Link
               href={siteConfig.links.github}
               target="_blank"
@@ -46,7 +48,10 @@ export default async function IndexPage() {
           alt="Crewters Sports Map Image"
           width={300}
           height={150}
-          className="rounded-lg bg-background"
+          // className="rounded-lg bg-background"
+                  className={cn(
+                    "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+                  )}
           priority
         />
         <Image
@@ -54,7 +59,10 @@ export default async function IndexPage() {
           alt="Crewters Sports Map Image"
           width={300}
           height={150}
-          className="rounded-lg bg-background"
+          // className="rounded-lg bg-background"
+                            className={cn(
+                    "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+                  )}
           priority
         />
         <Image
@@ -62,7 +70,10 @@ export default async function IndexPage() {
           alt="Crewters Sports Map Image"
           width={300}
           height={150}
-          className="rounded-lg bg-background"
+          // className="rounded-lg bg-background"
+                            className={cn(
+                    "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+                  )}
           priority
         />
       </section>

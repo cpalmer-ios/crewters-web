@@ -169,7 +169,7 @@ export const docsConfig: DocsConfig = {
       ],
     },
     {
-      title: "Marketing Site",
+      title: "Promo Site",
       items: [
         {
           title: "Introduction",
