@@ -6,8 +6,8 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 
 import { SignupButtonWithModal } from "./components/SingUpButtonWithModal"
-
-// const width =
+import { D3AnimatedChart } from "@/components/d3-animated-chart"
+import { FeaturePollChart } from "@/components/feature-poll-chart"
 
 export default async function IndexPage() {
   return (
@@ -19,15 +19,16 @@ export default async function IndexPage() {
             className="rounded-2xl bg-muted px-4 py-1.5 text-sm font-medium"
             target="_blank"
           >
-            Find your crew
+            find your crew.
           </Link>
           <h1 className="font-heading text-3xl sm:text-5xl md:text-6xl lg:text-7xl">
             A Sports Social Network Connecting You & Your Community to Sports
             Venues around the World.
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            I&apos;m building a iOS Mobile App with React Native and allowing everyone to test, contribute and decide on the features. Follow along as we figure this out together.
+            I&apos;m building this iOS Mobile App with React Native and allowing everyone to test, contribute and decide on the features. Sign up below to test the app early and follow along as we figure this out together.
           </p>
+          <br />
           <div className="space-x-0">
             <SignupButtonWithModal title="Sign Up" />
             &nbsp;&nbsp;&nbsp;
@@ -132,6 +133,7 @@ export default async function IndexPage() {
 
               <div className="space-y-2">
                 <h3 className="font-bold">Teams</h3>
+                <h3 className="font-bold text-muted-foreground">Teams - In Progress</h3>
                 <p className="text-sm text-muted-foreground">
                   Join a Team or create your own.
                 </p>
@@ -154,6 +156,7 @@ export default async function IndexPage() {
               </svg>
               <div className="space-y-2">
                 <h3 className="font-bold">Leagues</h3>
+                <h3 className="font-bold text-muted-foreground">Leagues - In Progress</h3>
                 <p className="text-sm text-muted-foreground">
                   Compete in a League with your friends or other teams in your
                   area.
@@ -183,6 +186,7 @@ export default async function IndexPage() {
 
               <div className="space-y-2">
                 <h3 className="font-bold">Stats</h3>
+                <h3 className="font-bold text-muted-foreground">Stats - In Progress</h3>
                 <p className="text-sm text-muted-foreground">
                   Track your games and set your own personal sports goals.
                 </p>
@@ -194,6 +198,7 @@ export default async function IndexPage() {
               <i className="fa-solid fa-trophy"></i>
               <div className="space-y-2">
                 <h3 className="font-bold">Trophies</h3>
+                <h3 className="font-bold text-muted-foreground">Trophies - In Progress</h3>
                 <p className="text-sm text-muted-foreground">
                   Earn trophies as you play and complete challenges.
                 </p>
@@ -202,11 +207,49 @@ export default async function IndexPage() {
           </div>
         </div>
         <div className="mx-auto text-center md:max-w-[58rem]">
-          <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
+          {/* <p className="leading-normal text-muted-foreground sm:text-lg sm:leading-7">
             Crewters also includes a built-in chat system, allowing you to
             communicate with your friends and teammates. You can also share
             photos and videos of your games, and follow your friends&apos;
             activities. <br />
+          </p> */}
+        </div>
+      </section>
+      <section className="container flex max-w-[64rem] flex-col items-center justify-center gap-4 py-8 md:py-12 lg:py-24">
+      <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+      <h2 className="text-3xl font-bold text-center mb-8">Build With Us: Vote for What's Next</h2>
+          <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-8">
+            This app is dedicated to providing users with the best possible gamified sports experience. Help me prioritize what to build next by voting for your favorite features and create the ultimate sports community platform.
+          </p>
+          <FeaturePollChart 
+            data={[
+              { feature: "Teams", votes: 156 },
+              { feature: "Leagues", votes: 132 },
+              { feature: "Stats", votes: 98 },
+              { feature: "Trophies", votes: 87 },
+              // { feature: "Venue Booking", votes: 87 },
+              { feature: "Challenges", votes: 76 },
+              { feature: "Chat", votes: 65 },
+            ]} 
+          />
+          <div className="text-center mt-8">
+            <p className="text-muted-foreground mb-4">Want to suggest a new feature?</p>
+            <SignupButtonWithModal title="Sign Up" />
+          </div>
+        </div>
+      </section>
+      <section className="container flex max-w-[64rem] flex-col items-center justify-center gap-4 py-8 md:py-12 lg:py-24">
+      <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
+          <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
+            Community Growth
+          </h2>
+          <D3AnimatedChart 
+            data={[10, 30, 50, 70, 90, 70, 50, 80, 60, 90, 100, 120]} 
+            width={800} 
+            height={400} 
+          /> 
+          <p className="text-center text-muted-foreground mt-2 max-w-2xl mx-auto">
+            Join our growing community of sports enthusiasts and venues across the world.
           </p>
         </div>
       </section>
@@ -220,17 +263,22 @@ export default async function IndexPage() {
             with their friends, teams, and local sports venues. Whether
             you&apos;re looking to join a team, challenge your friends, or just
             find a place to play, Crewters has you covered. <br />
+            <br />
             <Link
               href={siteConfig.links.github}
               target="_blank"
               rel="noreferrer"
               className="underline underline-offset-4"
             >
-              Join the Crewters community on GitHub
+              Developers, apply to join the Crewters community on GitHub
             </Link>
             &nbsp; to contribute, report issues, or just follow along with the
-            development of this exciting project.
+            development of this exciting project. 
+            <br />
+            <br />
+            Sports Tech Fans, Sign Up below to become a beta tester for our app where you can download the app early and decide what features you would like to see me build next.
           </p>
+          <br />
           <SignupButtonWithModal title="Join the Crewters Community" />
         </div>
       </section>

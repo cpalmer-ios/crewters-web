@@ -28,7 +28,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               Crewters
             </a>
-            . Hosted on{" "}
+            {/* . Hosted on{" "}
             <a
               href="https://github.com"
               target="_blank"
@@ -55,7 +55,7 @@ export function SiteFooter({ className }: React.HTMLAttributes<HTMLElement>) {
             >
               GitHub
             </a>
-            .
+            . */}
           </p>
         </div>
         <ModeToggle />
