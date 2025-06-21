@@ -27,47 +27,47 @@ async function getPageFromParams(params) {
   return page
 }
 
-export async function generateMetadata({
-  params,
-}: PageProps): Promise<Metadata> {
-  const page = await getPageFromParams(params)
+// export async function generateMetadata({
+//   params,
+// }: PageProps): Promise<Metadata> {
+//   const page = await getPageFromParams(params)
 
-  if (!page) {
-    return {}
-  }
+//   if (!page) {
+//     return {}
+//   }
 
-  const url = env.NEXT_PUBLIC_APP_URL
+//   const url = env.NEXT_PUBLIC_APP_URL
 
-  const ogUrl = new URL(`${url}/api/og`)
-  ogUrl.searchParams.set("heading", page.title)
-  ogUrl.searchParams.set("type", siteConfig.name)
-  ogUrl.searchParams.set("mode", "light")
+//   const ogUrl = new URL(`${url}/api/og`)
+//   ogUrl.searchParams.set("heading", page.title)
+//   ogUrl.searchParams.set("type", siteConfig.name)
+//   ogUrl.searchParams.set("mode", "light")
 
-  return {
-    title: page.title,
-    description: page.description,
-    openGraph: {
-      title: page.title,
-      description: page.description,
-      type: "article",
-      url: absoluteUrl(page.slug),
-      images: [
-        {
-          url: ogUrl.toString(),
-          width: 1200,
-          height: 630,
-          alt: page.title,
-        },
-      ],
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: page.title,
-      description: page.description,
-      images: [ogUrl.toString()],
-    },
-  }
-}
+//   return {
+//     title: page.title,
+//     description: page.description,
+//     openGraph: {
+//       title: page.title,
+//       description: page.description,
+//       type: "article",
+//       url: absoluteUrl(page.slug),
+//       images: [
+//         {
+//           url: ogUrl.toString(),
+//           width: 1200,
+//           height: 630,
+//           alt: page.title,
+//         },
+//       ],
+//     },
+//     twitter: {
+//       card: "summary_large_image",
+//       title: page.title,
+//       description: page.description,
+//       images: [ogUrl.toString()],
+//     },
+//   }
+// }
 
 export async function generateStaticParams(): Promise<PageProps["params"][]> {
   return allPages.map((page) => ({
