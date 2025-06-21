@@ -29,16 +29,32 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation",
         },
         {
-          title: "Components",
+          title: "iOS App",
+          href: "/docs/ios-app",
+        },
+        {
+          title: "Documentation",
           href: "/docs/documentation/components",
-        },
-        {
-          title: "Code Blocks",
-          href: "/docs/documentation/code-blocks",
-        },
-        {
-          title: "Style Guide",
-          href: "/docs/documentation/style-guide",
+          subLinks: [
+            {
+              title: "• Introduction",
+              href: "/docs/documentation/introduction",
+              disabled: false,
+            },
+            {
+              title: "•  Components",
+              href: "/docs/documentation/components",
+              disabled: false,
+            },
+            {
+              title: "•  Code Blocks",
+              href: "/docs/documentation/code-blocks",
+            },
+            {
+              title: "•  Style Guide",
+              href: "/docs/documentation/style-guide",
+            },
+          ],
         },
         {
           title: "Search",
@@ -63,47 +79,47 @@ export const docsConfig: DocsConfig = {
           title: "Features",
           href: "/docs/in-progress",
           subLinks: [
-             {
-          title: "• User",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Events",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Leagues",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Teams",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Stats",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Trophies",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Requests",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Notifications",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-          ]
+            {
+              title: "• User",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Events",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Leagues",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Teams",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Stats",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Trophies",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Requests",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Notifications",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+          ],
         },
       ],
     },
@@ -124,47 +140,47 @@ export const docsConfig: DocsConfig = {
           title: "Schemas",
           href: "/docs/in-progress",
           subLinks: [
-             {
-          title: "• User",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Events",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Leagues",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Teams",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Stats",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Trophies",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Requests",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-        {
-          title: "• Notifications",
-          href: "/docs/in-progress",
-          disabled: true,
-        },
-          ]
+            {
+              title: "• User",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Events",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Leagues",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Teams",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Stats",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Trophies",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Requests",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+            {
+              title: "• Notifications",
+              href: "/docs/in-progress",
+              disabled: true,
+            },
+          ],
         },
       ],
     },

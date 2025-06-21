@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+import { Alert } from "@/components/ui/alert"
 
 export function SignupButtonWithModal() {
   const [showModal, setShowModal] = useState(false)
@@ -14,24 +15,35 @@ export function SignupButtonWithModal() {
 
   useEffect(() => {
     setSuccess(false)
-  },[showModal])
+    setError("")
+  }, [showModal])
 
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setLoading(true)
     setError("")
-    try {
-      // TODO: Replace with your mailing list or Firebase logic
-      // Example: await addDoc(collection(db, "mailingList"), { name, email })
-      await new Promise(res => setTimeout(res, 1000)) // fake delay
 
-      // 3rd party mailing list integration
+    try {
+      const res = await fetch("/api/signup", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email })
+      })
+
+      const data = await res.json()
+
+      if (!res.ok) {
+        throw new Error(data.error || "Signup failed")
+      }
 
       setSuccess(true)
-    } catch (err) {
-      setError("Something went wrong. Please try again.")
+      setName("")
+      setEmail("")
+    } catch (err: any) {
+      setError(err.message || "Something went wrong. Please try again.")
+    } finally {
+      setLoading(false)
     }
-    setLoading(false)
   }
 
   return (
@@ -43,6 +55,7 @@ export function SignupButtonWithModal() {
       >
         Sign Up
       </button>
+
       {showModal && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/25">
           <div className="bg-background rounded-lg p-8 shadow-lg w-full max-w-md relative">
@@ -54,19 +67,20 @@ export function SignupButtonWithModal() {
               ×
             </button>
             <h2 className="text-xl font-bold mb-4">Sign Up</h2>
+
             {success ? (
               <div className="text-green-600">Thank you for signing up!</div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
                 <input
-                  className="w-full border rounded px-3 py-2"
+                  className="w-full border rounded px-3 py-2 bg-white/25"
                   placeholder="Name"
                   value={name}
                   onChange={e => setName(e.target.value)}
                   required
                 />
                 <input
-                  className="w-full border rounded px-3 py-2"
+                  className="w-full border rounded px-3 py-2 bg-white/25"
                   placeholder="Email"
                   type="email"
                   value={email}

@@ -40,11 +40,11 @@ export const metadata = {
   ],
   authors: [
     {
-      name: "shadcn",
-      url: "https://shadcn.com",
+      name: "crewters.official",
+      url: "https://crewters.com",
     },
   ],
-  creator: "shadcn",
+  creator: "crewters.official",
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -62,7 +62,7 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     images: [`${siteConfig.url}/og.jpg`],
-    creator: "@shadcn",
+    creator: "@crewters.official",
   },
   icons: {
     icon: "/favicon.ico",
