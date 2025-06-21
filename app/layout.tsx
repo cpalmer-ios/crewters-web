@@ -2,6 +2,8 @@ import { Inter as FontSans } from "next/font/google"
 import localFont from "next/font/local"
 
 import "@/styles/globals.css"
+import Script from "next/script"
+
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Toaster } from "@/components/ui/toaster"
@@ -76,7 +78,11 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <script src="https://kit.fontawesome.com/b6dace8d13.js" crossOrigin="anonymous"></script>
+        <Script
+          src="https://kit.fontawesome.com/b6dace8d13.js"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />{" "}
       </head>
       <body
         className={cn(

@@ -66,7 +66,7 @@ export function DocsSidebarNavItems({
                     {item.subLinks.map((subItem, subIndex) => (
                       <li key={subIndex} className="pl-4">
                         <Link
-                          href={subItem.href}
+                          href={subItem.href ?? '#'}
                           className={cn(
                             "flex w-full items-center rounded-md p-2 hover:underline",
                             {

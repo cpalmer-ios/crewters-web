@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { Alert } from "@/components/ui/alert"
 
-export function SignupButtonWithModal() {
+export function SignupButtonWithModal({ title }: { title: string }) {
   const [showModal, setShowModal] = useState(false)
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -53,7 +53,7 @@ export function SignupButtonWithModal() {
         className={cn(buttonVariants({ size: "lg" }))}
         onClick={() => setShowModal(true)}
       >
-        Sign Up
+        {title}
       </button>
 
       {showModal && (

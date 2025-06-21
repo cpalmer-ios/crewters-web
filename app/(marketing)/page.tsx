@@ -1,12 +1,13 @@
-import Link from "next/link"
 import Image from "next/image"
+import Link from "next/link"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
+
 import { SignupButtonWithModal } from "./components/SingUpButtonWithModal"
 
-// const width = 
+// const width =
 
 export default async function IndexPage() {
   return (
@@ -25,16 +26,13 @@ export default async function IndexPage() {
             Venues around the World.
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
-            I&apos;m building a iOS Mobile App with React Native and open
-            sourcing everything. Follow along as we figure this out together.
+            I&apos;m building a iOS Mobile App with React Native and allowing everyone to test, contribute and decide on the features. Follow along as we figure this out together.
           </p>
           <div className="space-x-0">
-            <SignupButtonWithModal />
+            <SignupButtonWithModal title="Sign Up" />
             &nbsp;&nbsp;&nbsp;
             <Link
-              href={siteConfig.links.github}
-              target="_blank"
-              rel="noreferrer"
+              href="mailto:info@crewters.com"
               className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
             >
               Contact
@@ -49,9 +47,9 @@ export default async function IndexPage() {
           width={300}
           height={150}
           // className="rounded-lg bg-background"
-                  className={cn(
-                    "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
-                  )}
+          className={cn(
+            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+          )}
           priority
         />
         <Image
@@ -60,9 +58,9 @@ export default async function IndexPage() {
           width={300}
           height={150}
           // className="rounded-lg bg-background"
-                            className={cn(
-                    "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
-                  )}
+          className={cn(
+            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+          )}
           priority
         />
         <Image
@@ -71,9 +69,9 @@ export default async function IndexPage() {
           width={300}
           height={150}
           // className="rounded-lg bg-background"
-                            className={cn(
-                    "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
-                  )}
+          className={cn(
+            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+          )}
           priority
         />
       </section>
@@ -233,17 +231,10 @@ export default async function IndexPage() {
             &nbsp; to contribute, report issues, or just follow along with the
             development of this exciting project.
           </p>
-          <Link
-            href={siteConfig.links.github}
-            target="_blank"
-            rel="noreferrer"
-            className={cn(buttonVariants({ size: "lg" }))}
-          >
-            Join the Crewters Community
-          </Link>
+          <SignupButtonWithModal title="Join the Crewters Community" />
         </div>
       </section>
-      <section id="open-source" className="container py-8 md:py-12 lg:py-24">
+      {/* <section id="open-source" className="container py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
             Proudly CIC
@@ -262,7 +253,7 @@ export default async function IndexPage() {
             .{" "}
           </p>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
