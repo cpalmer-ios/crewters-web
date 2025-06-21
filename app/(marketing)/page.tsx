@@ -217,7 +217,7 @@ export default async function IndexPage() {
       </section>
       <section className="container flex max-w-[64rem] flex-col items-center justify-center gap-4 py-8 md:py-12 lg:py-24">
       <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
-      <h2 className="text-3xl font-bold text-center mb-8">Build With Us: Vote for What's Next</h2>
+      <h2 className="text-3xl font-bold text-center mb-8">Build With Us: Vote for What&apos;s Next</h2>
           <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-8">
             This app is dedicated to providing users with the best possible gamified sports experience. Help me prioritize what to build next by voting for your favorite features and create the ultimate sports community platform.
           </p>
