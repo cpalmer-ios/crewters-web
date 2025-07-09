@@ -1,90 +1,138 @@
-# Crewters
+<div align="center">
+  <img src="/public/images/icon.png" alt="Crewters Logo" width="120" height="120">
+  <h1>Crewters</h1>
+  <p>
+    <strong>Find Your Crew. Play Your Sport. Anywhere.</strong>
+  </p>
+  <p>
+    A sports social network connecting athletes, teams, and sports venues worldwide.
+  </p>
+  
+  [![Next.js](https://img.shields.io/badge/Next.js-13.4.7-000000?style=flat-square&logo=next.js)](https://nextjs.org/)
+  [![React](https://img.shields.io/badge/React-18.2.0-61DAFB?style=flat-square&logo=react)](https://reactjs.org/)
+  [![TypeScript](https://img.shields.io/badge/TypeScript-5.0.4-3178C6?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.3.0-06B6D4?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+</div>
 
-An open source application built using the new router, server components and everything new in Next.js 13.
+## 🌟 About Crewters
 
-> **Warning**
-> This app is a work in progress. I'm building this in public. You can follow the progress on Twitter [@shadcn](https://twitter.com/shadcn).
-> See the roadmap below.
+Crewters is a revolutionary sports social networking platform designed to connect athletes, teams, and sports venues around the world. Whether you're looking to join a local pickup game, organize team events, or discover new sports facilities, Crewters provides the tools you need to stay active and connected with your sports community.
 
-## About this project
+## 🚀 Key Features
 
-This project as an experiment to see how a modern app (with features like authentication, subscriptions, API routes, static pages for docs ...etc) would work in Next.js 13 and server components.
+### 🗺️ Interactive Sports Map
+- Discover sports venues and events near you
+- Filter by sport type, skill level, and availability
+- Real-time updates on game status and player counts
 
-**This is not a starter template.**
+### 👥 Community Building
+- Create and join sports crews
+- Connect with like-minded athletes
+- Share achievements and game highlights
 
-A few people have asked me to turn this into a starter. I think we could do that once the new features are out of beta.
+### 🎯 Event Management
+- Organize and schedule games
+- Send invites and track RSVPs
+- In-app messaging for team coordination
 
-## Note on Performance
+### 📱 Mobile-First Experience
+- Native mobile app feel with PWA support
+- Offline functionality for checking game details
+- Push notifications for game updates
 
-> **Warning**
-> This app is using the unstable releases for Next.js 13 and React 18. The new router and app dir is still in beta and not production-ready.
-> **Expect some performance hits when testing the dashboard**.
-> If you see something broken, you can ping me [@shadcn](https://twitter.com/shadcn).
+## 🛠️ Tech Stack
 
-## Features
+- **Frontend**: Next.js 13 with React 18
+- **Styling**: Tailwind CSS with Radix UI components
+- **Authentication**: NextAuth.js
+- **Database**: Prisma with PlanetScale
+- **Payments**: Stripe integration
+- **Deployment**: Vercel
+- **Analytics**: Built-in dashboard
+- **Type Safety**: TypeScript
 
-- New `/app` dir,
-- Routing, Layouts, Nested Layouts and Layout Groups
-- Data Fetching, Caching and Mutation
-- Loading UI
-- Route handlers
-- Metadata files
-- Server and Client Components
-- API Routes and Middlewares
-- Authentication using **NextAuth.js**
-- ORM using **Prisma**
-- Database on **PlanetScale**
-- UI Components built using **Radix UI**
-- Documentation and blog using **MDX** and **Contentlayer**
-- Subscriptions using **Stripe**
-- Styled using **Tailwind CSS**
-- Validations using **Zod**
-- Written in **TypeScript**
+## 🚀 Getting Started
 
-## Roadmap
+### Prerequisites
 
-- [x] ~Add MDX support for basic pages~
-- [x] ~Build marketing pages~
-- [x] ~Subscriptions using Stripe~
-- [x] ~Responsive styles~
-- [x] ~Add OG image for blog using @vercel/og~
-- [x] Dark mode
+- Node.js 18.0.0 or later
+- pnpm 8.0.0 or later
+- MySQL-compatible database (or use PlanetScale)
+- Stripe account for payment processing
 
-## Known Issues
+### Installation
 
-A list of things not working right now:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/crewters.git
+   cd crewters
+   ```
 
-1. ~GitHub authentication (use email)~
-2. ~[Prisma: Error: ENOENT: no such file or directory, open '/var/task/.next/server/chunks/schema.prisma'](https://github.com/prisma/prisma/issues/16117)~
-3. ~[Next.js 13: Client side navigation does not update head](https://github.com/vercel/next.js/issues/42414)~
-4. [Cannot use opengraph-image.tsx inside catch-all routes](https://github.com/vercel/next.js/issues/48162)
+2. Install dependencies:
+   ```bash
+   pnpm install
+   ```
 
-## Why not tRPC, Turborepo or X?
+3. Set up environment variables:
+   ```bash
+   cp .env.example .env.local
+   ```
+   Update the variables in `.env.local` with your configuration.
 
-I might add this later. For now, I want to see how far we can get using Next.js only.
+4. Run database migrations:
+   ```bash
+   pnpm prisma migrate dev
+   ```
 
-If you have some suggestions, feel free to create an issue.
+5. Start the development server:
+   ```bash
+   pnpm dev
+   ```
 
-## Running Locally
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-1. Install dependencies using pnpm:
+## 📱 Mobile App
 
-```sh
-pnpm install
-```
+Crewters is built with React Native for a seamless mobile experience:
+- iOS and Android support
+- Push notifications
+- Offline capabilities
+- Camera integration for sharing moments
 
-2. Copy `.env.example` to `.env.local` and update the variables.
+## 🌍 Contributing
 
-```sh
-cp .env.example .env.local
-```
+We welcome contributions from the community! Here's how you can help:
 
-3. Start the development server:
+1. Fork the repository
+2. Create a new branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-```sh
-pnpm dev
-```
+Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
 
-## License
+## 📄 License
 
-Licensed under the [MIT license](https://github.com/shadcn/taxonomy/blob/main/LICENSE.md).
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+
+## 🤝 Support
+
+Having trouble? Here's how to reach us:
+
+- Email: [support@crewters.com](mailto:support@crewters.com)
+- Twitter: [@crewtersapp](https://twitter.com/crewtersapp)
+- Join our [Discord community](https://discord.gg/crewters)
+
+## 🙏 Acknowledgments
+
+- Built with ❤️ by the Crewters team
+- Special thanks to all our beta testers and contributors
+- Icons by [Font Awesome](https://fontawesome.com/)
+- UI Components by [shadcn/ui](https://ui.shadcn.com/)
+
+---
+
+<div align="center">
+  Made with ❤️ for sports enthusiasts everywhere
+</div>
