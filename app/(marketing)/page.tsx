@@ -27,10 +27,10 @@ export default async function IndexPage() {
           </h1>
           <p className="max-w-[42rem] leading-normal text-muted-foreground sm:text-xl sm:leading-8">
             Help Shape the Future — From the Ground Up We&apos;re building a new
-            iOS app and you're invited to be a part of our journey. Not just as
+            iOS app and you&apos;re invited to be a part of our journey. Not just as
             a first gen user, but as a co-creator. You&apos;ll get early access
             to new features and prototypes and help shape our future, and have a
-            real say in where we go next. Don&apos;t like something? Let's take
+            real say in where we go next. Don&apos;t like something? Let&apos;s take
             a vote — and we&apos;ll change it. This is your chance to shape an
             app in real time and follow the journey as it grows into our
             collective vision. Sign up below to test the app super early, share
@@ -152,8 +152,7 @@ export default async function IndexPage() {
           </div>
           <div className="relative overflow-hidden rounded-lg border bg-background p-2">
             <div className="flex h-[180px] flex-col justify-between rounded-md p-6">
-              <i className="fa-solid text-[1.8rem] fa-chart-bar"></i>
-
+              <i className="fa-solid text-[1.8rem] fa-chart-column"></i>
               <div className="space-y-2">
                 <h3 className="font-bold">Stats</h3>
                 <h3 className="font-bold text-muted-foreground">
