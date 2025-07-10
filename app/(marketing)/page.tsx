@@ -195,7 +195,7 @@ export default async function IndexPage() {
           </h2>
           <p className="text-center text-muted-foreground max-w-3xl mx-auto mb-8">
             This app is dedicated to providing users with the best possible
-            gamified sports experience. Help me prioritize what to build next by
+            gamified sports experience. Help us prioritize what to build next by
             voting for your favorite features and create the ultimate sports
             community platform.
           </p>
@@ -254,12 +254,12 @@ export default async function IndexPage() {
               Developers, apply to join the Crewters community on GitHub
             </Link>
             &nbsp; to contribute, report issues, or just follow along with the
-            development of this exciting project.
+            development of this project.
             <br />
             <br />
             Sports Tech Fans, Sign Up below to become a beta tester for our app
             where you can download the app early and decide what features you
-            would like to see me build next.
+            would like to see us build next.
           </p>
           <br />
           <SignupButtonWithModal title="Join the Crewters Community" />
