@@ -53,7 +53,18 @@ export default async function IndexPage() {
       </section>
       <section className="container flex max-w-[64rem] flex-row items-center justify-center py-2 md:py-6 lg:py-12">
         <Image
-          src="/images/screen3.png"
+          src="/images/screen6.png"
+          alt="Crewters Sports Map Image"
+          width={350}
+          height={200}
+          // className="rounded-lg bg-background"
+          className={cn(
+            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+          )}
+          priority
+        />
+        <Image
+          src="/images/screen7.png"
           alt="Crewters Sports Map Image"
           width={300}
           height={150}
@@ -64,7 +75,18 @@ export default async function IndexPage() {
           priority
         />
         <Image
-          src="/images/screen1.png"
+          src="/images/screen12.png"
+          alt="Crewters Sports Map Image"
+          width={350}
+          height={200}
+          // className="rounded-lg bg-background"
+          className={cn(
+            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+          )}
+          priority
+        />
+        <Image
+          src="/images/screen13.png"
           alt="Crewters Sports Map Image"
           width={300}
           height={150}
@@ -75,7 +97,7 @@ export default async function IndexPage() {
           priority
         />
         <Image
-          src="/images/screen2.png"
+          src="/images/screen5.png"
           alt="Crewters Sports Map Image"
           width={300}
           height={150}
@@ -85,6 +107,17 @@ export default async function IndexPage() {
           )}
           priority
         />
+          <Image
+            src="/images/screen9.png"
+            alt="Crewters Sports Map Image"
+            width={300}
+            height={150}
+            // className="rounded-lg bg-background"
+            className={cn(
+              "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+            )}
+            priority
+          />
       </section>
       <section
         id="features"
@@ -264,7 +297,7 @@ export default async function IndexPage() {
             would like to see us build next.
           </p>
           <br />
-          <SignupButtonWithModal title="Join the Crewters Community" />
+          <SignupButtonWithModal title="Join the Crew" />
         </div>
       </section>
       {/* <section id="open-source" className="container py-8 md:py-12 lg:py-24">
