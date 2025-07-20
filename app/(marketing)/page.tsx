@@ -59,7 +59,7 @@ export default async function IndexPage() {
           height={200}
           // className="rounded-lg bg-background"
           className={cn(
-            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+            "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
           priority
         />
@@ -70,7 +70,7 @@ export default async function IndexPage() {
           height={150}
           // className="rounded-lg bg-background"
           className={cn(
-            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+            "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
           priority
         />
@@ -81,7 +81,7 @@ export default async function IndexPage() {
           height={200}
           // className="rounded-lg bg-background"
           className={cn(
-            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+            "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
           priority
         />
@@ -92,7 +92,7 @@ export default async function IndexPage() {
           height={150}
           // className="rounded-lg bg-background"
           className={cn(
-            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+            "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
           priority
         />
@@ -103,7 +103,7 @@ export default async function IndexPage() {
           height={150}
           // className="rounded-lg bg-background"
           className={cn(
-            "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+            "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
           priority
         />
@@ -114,7 +114,7 @@ export default async function IndexPage() {
             height={150}
             // className="rounded-lg bg-background"
             className={cn(
-              "h-[var(--radix-select-trigger-height)] w-1/3 min-w-[var(--radix-select-trigger-width)]"
+              "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
             )}
             priority
           />
