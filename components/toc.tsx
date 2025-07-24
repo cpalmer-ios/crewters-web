@@ -11,17 +11,15 @@ interface TocProps {
 }
 
 export function DashboardTableOfContents({ toc }: TocProps) {
-  const itemIds = React.useMemo(
-    () =>
+  const itemIds =
       toc.items
         ? toc.items
             .flatMap((item) => [item.url, item?.items?.map((item) => item.url)])
             .flat()
             .filter(Boolean)
             .map((id) => id?.split("#")[1])
-        : [],
-    [toc]
-  )
+        : []
+    
   const activeHeading = useActiveItem(itemIds)
   const mounted = useMounted()
 

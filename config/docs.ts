@@ -29,6 +29,15 @@ export const docsConfig: DocsConfig = {
           href: "/docs/documentation",
         },
         {
+          title: "Style Guide",
+          href: "/docs/documentation/style-guide",
+        },
+        {
+          title: "Search",
+          href: "/docs/in-progress",
+          disabled: true,
+        },
+        {
           title: "iOS App",
           href: "/docs/ios-app",
         },
@@ -50,16 +59,7 @@ export const docsConfig: DocsConfig = {
               title: "•  Code Blocks",
               href: "/docs/documentation/code-blocks",
             },
-            {
-              title: "•  Style Guide",
-              href: "/docs/documentation/style-guide",
-            },
           ],
-        },
-        {
-          title: "Search",
-          href: "/docs/in-progress",
-          disabled: true,
         },
       ],
     },
