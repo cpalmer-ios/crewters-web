@@ -10,6 +10,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { Analytics } from "@/components/analytics"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
 import { ThemeProvider } from "@/components/theme-provider"
+import { StructuredData } from "@/components/structured-data"
 
 const fontSans = FontSans({
   subsets: ["latin"],
@@ -27,6 +28,7 @@ interface RootLayoutProps {
 }
 
 export const metadata = {
+  metadataBase: new URL(siteConfig.url),
   title: {
     default: siteConfig.name,
     template: `%s | ${siteConfig.name}`,
@@ -34,19 +36,48 @@ export const metadata = {
   description: siteConfig.description,
   keywords: [
     "Crewters",
-    "Sports",
-    "Social Network",
-    "Community",
-    "Games",
+    "Sports Social Network",
+    "Sports Community",
+    "Sports App",
+    "Sports Venues",
+    "Sports Events",
+    "Sports Teams",
+    "Sports Leagues",
+    "Sports Challenges",
+    "Sports Stats",
+    "Sports Trophies",
+    "Find Sports Venues",
+    "Join Sports Events",
+    "Sports Networking",
+    "Community Sports",
+    "Local Sports",
+    "Sports Gamification",
     "Football",
+    "Basketball",
+    "Soccer",
+    "Tennis",
+    "iOS Sports App",
+    "Sports Social Platform",
   ],
   authors: [
     {
-      name: "crewters.official",
+      name: "Crewters",
       url: "https://crewters.com",
     },
   ],
-  creator: "crewters.official",
+  creator: "Crewters",
+  publisher: "Crewters",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
     { media: "(prefers-color-scheme: dark)", color: "black" },
@@ -58,6 +89,14 @@ export const metadata = {
     title: siteConfig.name,
     description: siteConfig.description,
     siteName: siteConfig.name,
+    images: [
+      {
+        url: `${siteConfig.url}/og.png`,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.name,
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
@@ -72,6 +111,9 @@ export const metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: `${siteConfig.url}/site.webmanifest`,
+  alternates: {
+    canonical: siteConfig.url,
+  },
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
@@ -82,7 +124,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
           src="https://kit.fontawesome.com/b6dace8d13.js"
           crossOrigin="anonymous"
           strategy="afterInteractive"
-        />{" "}
+        />
+        <StructuredData type="Organization" />
+        <StructuredData type="WebSite" />
       </head>
       <body
         className={cn(

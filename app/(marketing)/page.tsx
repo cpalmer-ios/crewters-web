@@ -1,17 +1,56 @@
 import Image from "next/image"
 import Link from "next/link"
+import { Metadata } from "next"
 
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { buttonVariants } from "@/components/ui/button"
 import { D3AnimatedChart } from "@/components/d3-animated-chart"
 import { FeaturePollChart } from "@/components/feature-poll-chart"
+import { StructuredData } from "@/components/structured-data"
+import { FAQSection } from "@/components/faq-section"
 
 import { SignupButtonWithModal } from "./components/SingUpButtonWithModal"
+
+export const metadata: Metadata = {
+  title: "Crewters - Sports Social Network | Find Sports Venues & Events",
+  description:
+    "Join Crewters, the sports social network connecting you with friends, teams, and sports venues worldwide. Create events, challenge friends, join teams, compete in leagues, track stats, and earn trophies. Free iOS app with community-driven features.",
+  keywords: [
+    "sports social network",
+    "find sports venues",
+    "sports events",
+    "sports app",
+    "join sports teams",
+    "sports community",
+    "sports challenges",
+    "sports leagues",
+    "sports stats",
+    "iOS sports app",
+  ],
+  openGraph: {
+    title: "Crewters - Sports Social Network | Find Sports Venues & Events",
+    description:
+      "Join Crewters, the sports social network connecting you with friends, teams, and sports venues worldwide.",
+    type: "website",
+    images: [
+      {
+        url: `${siteConfig.url}/og.png`,
+        width: 1200,
+        height: 630,
+        alt: "Crewters Sports Social Network",
+      },
+    ],
+  },
+  alternates: {
+    canonical: siteConfig.url,
+  },
+}
 
 export default async function IndexPage() {
   return (
     <>
+      <StructuredData type="SoftwareApplication" />
       <section className="space-y-6 pb-8 pt-6 md:pb-12 md:pt-10 lg:py-32">
         <div className="container flex max-w-[64rem] flex-col items-center gap-4 text-center">
           <Link
@@ -54,10 +93,9 @@ export default async function IndexPage() {
       <section className="container flex max-w-[64rem] flex-row items-center justify-center py-2 md:py-6 lg:py-12">
         <Image
           src="/images/screen6.png"
-          alt="Crewters Sports Map Image"
+          alt="Crewters app screenshot showing sports venue map with location markers"
           width={350}
           height={200}
-          // className="rounded-lg bg-background"
           className={cn(
             "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
@@ -65,10 +103,9 @@ export default async function IndexPage() {
         />
         <Image
           src="/images/screen7.png"
-          alt="Crewters Sports Map Image"
+          alt="Crewters app screenshot displaying sports events and activities"
           width={300}
           height={150}
-          // className="rounded-lg bg-background"
           className={cn(
             "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
@@ -76,10 +113,9 @@ export default async function IndexPage() {
         />
         <Image
           src="/images/screen12.png"
-          alt="Crewters Sports Map Image"
+          alt="Crewters app screenshot showing sports team management interface"
           width={350}
           height={200}
-          // className="rounded-lg bg-background"
           className={cn(
             "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
@@ -87,10 +123,9 @@ export default async function IndexPage() {
         />
         <Image
           src="/images/screen13.png"
-          alt="Crewters Sports Map Image"
+          alt="Crewters app screenshot displaying sports challenges and competitions"
           width={300}
           height={150}
-          // className="rounded-lg bg-background"
           className={cn(
             "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
@@ -98,10 +133,9 @@ export default async function IndexPage() {
         />
         <Image
           src="/images/screen5.png"
-          alt="Crewters Sports Map Image"
+          alt="Crewters app screenshot showing sports statistics and performance tracking"
           width={300}
           height={150}
-          // className="rounded-lg bg-background"
           className={cn(
             "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
           )}
@@ -109,10 +143,9 @@ export default async function IndexPage() {
         />
           <Image
             src="/images/screen9.png"
-            alt="Crewters Sports Map Image"
+            alt="Crewters app screenshot displaying trophies and achievements system"
             width={300}
             height={150}
-            // className="rounded-lg bg-background"
             className={cn(
               "h-[var(--radix-select-trigger-height)] w-1/6 md:w-1/3 min-w-[var(--radix-select-trigger-width)]"
             )}
@@ -300,6 +333,7 @@ export default async function IndexPage() {
           <SignupButtonWithModal title="Join the Crew" />
         </div>
       </section>
+      <FAQSection />
       {/* <section id="open-source" className="container py-8 md:py-12 lg:py-24">
         <div className="mx-auto flex max-w-[58rem] flex-col items-center justify-center gap-4 text-center">
           <h2 className="font-heading text-3xl leading-[1.1] sm:text-3xl md:text-6xl">
